@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Test markup</title>
+  </head>
+  <body>
+    <aside>
+      <div class="aside-container">
+        <nav class="main-nav">
+          <div class="title-wrapper">
+            <a href="./index.html" class="main-nav__logo">
+              <svg class="main-nav__logo-icon">
+                <use href="./sprite.svg#icon-logo" />
+              </svg>
+              Dashboard
+            </a>
+            <span class="main-nav__logo-version">v.01</span>
+          </div>
+          <ul class="nav-list list">
+            <li class="nav-list__item">
+              <button type="button" class="nav-list__item-button">
+                <svg class="item-button__icon stroke">
+                  <use href="./sprite.svg#icon-key" />
+                </svg>
+                Dashboard
+              </button>
+            </li>
+            <li class="nav-list__item">
+              <button type="button" class="nav-list__item-button">
+                <svg class="item-button__icon non-stroke">
+                  <use href="./sprite.svg#icon-square" />
+                </svg>
+                Product
+                <svg class="item-button__icon-chevron">
+                  <use href="./sprite.svg#icon-chevron-right" />
+                </svg>
+              </button>
+            </li>
+            <li class="nav-list__item">
+              <button type="button" class="nav-list__item-button">
+                <svg class="item-button__icon non-stroke stroke">
+                  <use href="./sprite.svg#icon-user" />
+                </svg>
+                Customers
+                <svg class="item-button__icon-chevron">
+                  <use href="./sprite.svg#icon-chevron-right" />
+                </svg>
+              </button>
+            </li>
+            <li class="nav-list__item">
+              <button type="button" class="nav-list__item-button">
+                <svg class="item-button__icon stroke">
+                  <use href="./sprite.svg#icon-wallet" />
+                </svg>
+                Income
+                <svg class="item-button__icon-chevron">
+                  <use href="./sprite.svg#icon-chevron-right" />
+                </svg>
+              </button>
+            </li>
+            <li class="nav-list__item">
+              <button type="button" class="nav-list__item-button">
+                <svg class="item-button__icon non-stroke">
+                  <use href="./sprite.svg#icon-discount" />
+                </svg>
+                Promote
+                <svg class="item-button__icon-chevron">
+                  <use href="./sprite.svg#icon-chevron-right" />
+                </svg>
+              </button>
+            </li>
+            <li class="nav-list__item non-stroke">
+              <button type="button" class="nav-list__item-button">
+                <svg class="item-button__icon non-stroke">
+                  <use href="./sprite.svg#icon-message" />
+                </svg>
+                Help
+                <svg class="item-button__icon-chevron">
+                  <use href="./sprite.svg#icon-chevron-right" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="user">
+          <img src="/images/avatar.jpg" alt="user avatar" class="user__img" />
+          <div class="caption">
+            <p class="user__name">Evano</p>
+            <span class="user__position">Project Manager</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <header class="header">
+      <h1 class="header-title">Hello Evano 👋🏼,</h1>
+    </header>
+    <main>
+      <section>
+        <div class="customers-container">
+          <h2 class="customers-title title">All Customers</h2>
+          <span class="customers-subtitle">Active Members</span>
+          <form autocomplete="off" class="customers-form">
+            <button type="submit" class="customers-form__button">
+              <svg class="customers-form__icon-button"><use /></svg>
+            </button>
+            <input
+              type="text"
+              placeholder="Search"
+              class="customers-form__input"
+            />
+          </form>
+          <!-- <ul class="title-list list">
+            <li class="title-list__item"><p>Customer Name</p></li>
+            <li class="title-list__item"><p>Company</p></li>
+            <li class="title-list__item"><p>Phone Number</p></li>
+            <li class="title-list__item"><p>Email</p></li>
+            <li class="title-list__item"><p>Country</p></li>
+            <li class="title-list__item"><p>Status</p></li>
+          </ul> -->
+          <div class="customers-table__wrapper">
+            <table class="customers-table" padding="38px">
+              <thead class="customers-table__head">
+                <tr class="title-list">
+                  <th class="title-list__item"><p>Customer Name</p></th>
+                  <th class="title-list__item"><p>Company</p></th>
+                  <th class="title-list__item"><p>Phone Number</p></th>
+                  <th class="title-list__item"><p>Email</p></th>
+                  <th class="title-list__item"><p>Country</p></th>
+                  <th class="title-list__item"><p>Status</p></th>
+                </tr>
+              </thead>
+              <tbody class="customers-table__body">
+                <tr class="customers-table__row">
+                  <td class="customer__name">Jane Cooper</td>
+                  <td class="customer__company">Microsoft</td>
+                  <td class="customer__phone">(225) 555-0118</td>
+                  <td class="customer__email">jane@microsoft.com</td>
+                  <td class="customer__country">United States</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Floyd Miles</td>
+                  <td class="customer__company">Yahoo</td>
+                  <td class="customer__phone">(205) 555-0100</td>
+                  <td class="customer__email">floyd@yahoo.com</td>
+                  <td class="customer__country">Kiribati</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Ronald Richards</td>
+                  <td class="customer__company">Adobe</td>
+                  <td class="customer__phone">(302) 555-0107</td>
+                  <td class="customer__email">ronald@adobe.com</td>
+                  <td class="customer__country">Israel</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Marvin McKinney</td>
+                  <td class="customer__company">Tesla</td>
+                  <td class="customer__phone">(252) 555-0126</td>
+                  <td class="customer__email">marvin@tesla.com</td>
+                  <td class="customer__country">Iran</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Jerome Bell</td>
+                  <td class="customer__company">Google</td>
+                  <td class="customer__phone">(629) 555-0129</td>
+                  <td class="customer__email">jerome@google.com</td>
+                  <td class="customer__country">Réunion</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Kathryn Murphy</td>
+                  <td class="customer__company">Microsoft</td>
+                  <td class="customer__phone">(406) 555-0120</td>
+                  <td class="customer__email">kathryn@microsoft.com</td>
+                  <td class="customer__country">Curaçao</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Jacob Jones</td>
+                  <td class="customer__company">Yahoo</td>
+                  <td class="customer__phone">(208) 555-0112</td>
+                  <td class="customer__email">jacob@yahoo.com</td>
+                  <td class="customer__country">Brazil</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="customers-table__row">
+                  <td class="customer__name">Kristin Watson</td>
+                  <td class="customer__company">Facebook</td>
+                  <td class="customer__phone">(704) 555-0127</td>
+                  <td class="customer__email">kristin@facebook.com</td>
+                  <td class="customer__country">Åland Islands</td>
+                  <td>
+                    <div class="customer-status--active status-indicator">
+                      <p>Active</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <span class="pagination-info"
+            >Showing data 1 to 8 of 256K entries</span
+          >
+          <nav class="nav-pagination">
+            <ul class="pagination">
+              <li class="pagination__item">
+                <button class="pagination__button">1</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__button">2</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__button">3</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__button">4</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__button">40</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

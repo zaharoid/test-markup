@@ -1,0 +1,311 @@
+:root {
+  --primary-text-color: #292d32;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* <---Main-nav---> */
+
+.aside-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 306px;
+  min-height: 100%;
+
+  box-shadow: 0px 10px 60px 0px #e2ecf980;
+
+  padding: 36px 28px 76px;
+}
+
+.title-wrapper {
+  display: flex;
+  gap: 4px;
+  align-items: end;
+
+  margin-bottom: 53px;
+}
+
+.main-nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 39px;
+  letter-spacing: 0.01em;
+
+  color: #000;
+}
+
+.main-nav__logo-icon {
+  width: 37px;
+  height: 37px;
+}
+
+.item-button__icon {
+  width: 24px;
+  height: 24px;
+
+  margin-right: 14px;
+
+  transition: stroke 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
+}
+
+.item-button__icon.stroke {
+  stroke: #9197b3;
+}
+
+.item-button__icon.non-stroke {
+  fill: #9197b3;
+}
+
+.item-button__icon-chevron {
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  stroke: #9197b3;
+
+  margin-left: auto;
+
+  transition: stroke 250ms var(--timing-function);
+}
+
+.main-nav__logo-version {
+  display: block;
+
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: -0.01em;
+
+  color: #838383;
+
+  margin-bottom: 6.5px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.nav-list__item-button {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #9197b3;
+  background-color: inherit;
+  border-radius: 8px;
+  border: none;
+
+  padding: 11px 8px 11px 11px;
+
+  transition: all 250ms var(--timing-function);
+}
+
+.nav-list__item-button:hover {
+  color: #fff;
+  background-color: #5932ea;
+}
+
+.nav-list__item-button:hover > .item-button__icon.stroke,
+.nav-list__item-button:hover > .item-button__icon-chevron {
+  stroke: #fff;
+}
+.nav-list__item-button:hover > .item-button__icon.non-stroke {
+  fill: #fff;
+}
+
+.user {
+  letter-spacing: 0.01em;
+}
+
+.user__name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: #000;
+}
+.user__position {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #757575;
+}
+
+/* <---Header---> */
+
+.header {
+  max-width: 968px;
+  margin-left: auto;
+}
+
+.header-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+/* <---Customers---> */
+
+.customers-container {
+  max-width: 968px;
+  margin-left: auto;
+
+  margin-right: 95px;
+}
+
+.customers-table {
+  width: 886px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.customers-table__wrapper {
+  padding-left: 38px;
+  padding-right: 44px;
+}
+
+.customers-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.customers-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  color: #16c098;
+}
+
+.title-list__item {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+
+  text-align: left;
+
+  color: #b5b7c0;
+}
+
+.customers-table__row {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+td {
+  padding: 20px 0;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #292d32;
+}
+
+th {
+  border-bottom: 1px solid #eeeeee;
+  color: #292d32;
+
+  padding-bottom: 14px;
+}
+
+thead {
+  border-bottom: #000 1px solid;
+}
+
+.status-indicator {
+  padding: 4px 12px;
+  border-radius: 4px;
+
+  text-align: center;
+}
+
+.customer-status--inactive {
+  color: #df0404;
+  background-color: #ffc5c5;
+
+  border: 1px solid #df0404;
+}
+
+.customer-status--active {
+  color: #00b087;
+  background-color: rgba(22, 192, 152, 0.38);
+
+  border: 1px solid #00b087;
+}
+
+/* <---Pagination--->*/
+
+.pagination-info {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+
+  color: #b5b7c0;
+}
+
+/* <---User--->*/
+
+.user {
+  display: flex;
+  margin-top: 586px;
+  gap: 12px;
+}

@@ -10,10 +10,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mobile.css" />
     <title>Test markup</title>
   </head>
   <body>
-    <aside>
+    <button type="button" class="menu-button">
+      <svg class="menu-button__icon"><use href="./sprite.svg#icon-menu" /></svg>
+    </button>
+    <aside class="aside">
       <div class="aside-container">
         <nav class="main-nav">
           <div class="title-wrapper">
@@ -106,26 +110,24 @@
     <main>
       <section>
         <div class="customers-container">
-          <h2 class="customers-title title">All Customers</h2>
-          <span class="customers-subtitle">Active Members</span>
-          <form autocomplete="off" class="customers-form">
-            <button type="submit" class="customers-form__button">
-              <svg class="customers-form__icon-button"><use /></svg>
-            </button>
-            <input
-              type="text"
-              placeholder="Search"
-              class="customers-form__input"
-            />
-          </form>
-          <!-- <ul class="title-list list">
-            <li class="title-list__item"><p>Customer Name</p></li>
-            <li class="title-list__item"><p>Company</p></li>
-            <li class="title-list__item"><p>Phone Number</p></li>
-            <li class="title-list__item"><p>Email</p></li>
-            <li class="title-list__item"><p>Country</p></li>
-            <li class="title-list__item"><p>Status</p></li>
-          </ul> -->
+          <div class="customers-form__wrapper">
+            <div class="customers-info">
+              <h2 class="customers-title title">All Customers</h2>
+              <p class="customers-subtitle">Active Members</p>
+            </div>
+            <form autocomplete="off" class="customers-form">
+              <input
+                type="text"
+                placeholder="Search"
+                class="customers-form__input"
+              />
+              <button type="submit" class="customers-form__button">
+                <svg class="customers-form__icon-button">
+                  <use href="./sprite.svg#icon-search" />
+                </svg>
+              </button>
+            </form>
+          </div>
           <div class="customers-table__wrapper">
             <table class="customers-table" padding="38px">
               <thead class="customers-table__head">
@@ -147,7 +149,7 @@
                   <td class="customer__country">United States</td>
                   <td>
                     <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                      Active
                     </div>
                   </td>
                 </tr>
@@ -158,8 +160,8 @@
                   <td class="customer__email">floyd@yahoo.com</td>
                   <td class="customer__country">Kiribati</td>
                   <td>
-                    <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                    <div class="customer-status--inactive status-indicator">
+                      <span>Inactive</span>
                     </div>
                   </td>
                 </tr>
@@ -170,8 +172,8 @@
                   <td class="customer__email">ronald@adobe.com</td>
                   <td class="customer__country">Israel</td>
                   <td>
-                    <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                    <div class="customer-status--inactive status-indicator">
+                      <span>Inactive</span>
                     </div>
                   </td>
                 </tr>
@@ -183,7 +185,7 @@
                   <td class="customer__country">Iran</td>
                   <td>
                     <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                      <span>Active</span>
                     </div>
                   </td>
                 </tr>
@@ -195,7 +197,7 @@
                   <td class="customer__country">Réunion</td>
                   <td>
                     <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                      <span>Active</span>
                     </div>
                   </td>
                 </tr>
@@ -207,7 +209,7 @@
                   <td class="customer__country">Curaçao</td>
                   <td>
                     <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                      <span>Active</span>
                     </div>
                   </td>
                 </tr>
@@ -219,7 +221,7 @@
                   <td class="customer__country">Brazil</td>
                   <td>
                     <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                      <span>Active</span>
                     </div>
                   </td>
                 </tr>
@@ -230,19 +232,21 @@
                   <td class="customer__email">kristin@facebook.com</td>
                   <td class="customer__country">Åland Islands</td>
                   <td>
-                    <div class="customer-status--active status-indicator">
-                      <p>Active</p>
+                    <div class="customer-status--inactive status-indicator">
+                      <span>Inactive</span>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <span class="pagination-info"
-            >Showing data 1 to 8 of 256K entries</span
-          >
+
           <nav class="nav-pagination">
+            <p class="pagination-info">Showing data 1 to 8 of 256K entries</p>
             <ul class="pagination">
+              <li class="pagination__item">
+                <button class="pagination__button"><</button>
+              </li>
               <li class="pagination__item">
                 <button class="pagination__button">1</button>
               </li>
@@ -255,13 +259,18 @@
               <li class="pagination__item">
                 <button class="pagination__button">4</button>
               </li>
+              <li class="pagination__item"><span>...</span></li>
               <li class="pagination__item">
                 <button class="pagination__button">40</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__button">></button>
               </li>
             </ul>
           </nav>
         </div>
       </section>
     </main>
+    <script defer src="./sideMenu.js"></script>
   </body>
 </html>
